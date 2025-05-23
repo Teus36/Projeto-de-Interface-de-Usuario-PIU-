@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Descricao from "./Descricao";
 import "./Card.css";
 
 export default function Card({ imagem, nome, descricao }) {
@@ -14,13 +15,12 @@ export default function Card({ imagem, nome, descricao }) {
                 <img src={imagem} alt={nome} />
             </figure>
 
-            {expandido && (
-                <div className="descricao">
-                    <h3>{nome}</h3>
-                    <img src={imagem} alt={nome} className="ampliada" />
-                    <p>{descricao}</p>
-                </div>
-            )}
+            <Descricao 
+                imagem={imagem} 
+                nome={nome} 
+                descricao={descricao} 
+                ativo={expandido} 
+            />
         </button>
     )
 }

@@ -4,8 +4,7 @@ export default function Galeria ({children}){
 
     return(
         <>
-            <h1 style={{position: "absolute", left: '43%', bottom:'70%'}}>Pokedex</h1>
-            <br/>
+            <h1 style={{margin: "25px"}}>Pokedex</h1>
             <div className="galeria">
                 {children}
             </div>

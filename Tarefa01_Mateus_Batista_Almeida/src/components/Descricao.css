@@ -1,0 +1,46 @@
+.descricao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.descricao.ativo {
+    max-height: 500px; /* ou ajuste conforme o conteúdo */
+    opacity: 1;
+}
+
+.ampliada {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.descricao h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.descricao p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Animação suave ao aparecer */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
